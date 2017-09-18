@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>City Live</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/image/favicon.ico"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+    <div class="container clearfix">
+        <nav id="language_sel">
+            <ul>
+                <li><a href=""><img src="assets/img/flag-de.png" alt="German Language"></a></li>
+                <li><a href=""><img src="assets/img/flag-en.png" alt="English Language"></a></li>
+                <li><a href=""><img src="assets/img/flag-es.png" alt="Spanish Language"></a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section>
+
+    <div id="intro">
+        <div class="container">
+            <h1>Where should you live?</h1>
+            <p>Compile the form below to find your ideally city where you should live.</p>
+        </div>
+    </div>
+    <form id="form_test">
+        <div class="container">
+            <div class="row active">
+                <div class="col-sm-4">
+                    <h4>Age</h4>
+                    <span class="value" id="age_value">22</span>
+                </div>
+                <div class="col-sm-8">
+                    <div class="rangeInput">
+                        <span id="range_track_done_age" class="done_track"></span>
+                        <span id="range_track_todo_age" class="todo_track"></span>
+                        <input class="range" type="range" name="age" min="14" max="70" step="1" id="age" oninput="inputRange('age')" value="22">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Temperature</h4>
+                    <span class="value" id="temperature_value"></span>
+                </div>
+                <div class="col-sm-8">
+                    <div class="rangeInput">
+                        <span id="range_track_done_temperature" class="done_track"></span>
+                        <span id="range_track_todo_temperature" class="todo_track"></span>
+                        <input class="range" type="range" name="temperature" min="1" max="7" step="1" id="temperature" oninput="inputRange('temperature')" value="4">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>Weather</h4>
+                </div>
+                <div class="col-sm-8 radio_style">
+                    <div class="col-xs-3 noPadding">
+                        <input type="radio" name="weather" value="none" id="sun_weather" checked>
+                        <label for="sun_weather">
+                            <img src="assets/image/sun.png" alt="Sun" />
+                        </label>
+                    </div>
+                    <div class="col-xs-3 noPadding">
+                        <input type="radio" name="weather" value="small" id="cloud_weather">
+                        <label for="cloud_weather">
+                            <img src="assets/image/cloud.png" alt="Cloud" />
+                        </label>
+                    </div>
+                    <div class="col-xs-3 noPadding">
+                        <input type="radio" name="weather" value="middle" id="rain_weather">
+                        <label for="rain_weather">
+                            <img src="assets/image/rain.png" alt="rain" />
+                        </label>
+                    </div>
+                    <div class="col-xs-3 noPadding">
+                        <input type="radio" name="weather" value="large" id="snow_weather">
+                        <label for="snow_weather">
+                            <img src="assets/image/snow.png" alt="Snow" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h4>You Like</h4>
+                </div>
+                <div class="col-sm-8 radio_style">
+                    <div class="col-xs-6 noPadding">
+                        <input type="radio" name="location" value="nature" id="nature" checked>
+                        <label for="nature">
+                            <img src="assets/image/nature.png" alt="Nature" />
+                        </label>
+                    </div>
+                    <div class="col-xs-6 noPadding">
+                        <input type="radio" name="location" value="city" id="city">
+                        <label for="city">
+                            <img src="assets/image/city.png" alt="City" />
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 wrap_submit noPadding">
+                    <h3>Result</h3>
+                    <p>The city where you should live is:</p>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+        <div id="footer_control">
+            <div class="wrap_submit">
+                <button class="form_submit" id="form_prev_submit" onclick="formSubmit(event, 'prev')">PREVIOUS</button>
+                <button class="form_submit" id="form_next_submit" onclick="formSubmit(event, 'next')">NEXT</button>
+            </div>
+        </div>
+    </form>
+</section>
+<script type="text/javascript" src="assets/js/script.js"></script>
+</body>
+</html>

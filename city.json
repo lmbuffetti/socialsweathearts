@@ -1,0 +1,33 @@
+{"cities":[
+  {
+    "ID":"1",
+    "city":"Berlin",
+    "image":"gallery/berlin.jpg"
+  },
+  {
+    "ID":"2",
+    "city":"Munich",
+    "image":"gallery/munich.jpg"
+  },
+  {
+    "ID":"3",
+    "city":"New York",
+    "image":"gallery/new-york.jpg"
+  },
+  {
+    "ID":"4",
+    "city":"Rome",
+    "image":"gallery/rome.jpg"
+  },
+  {
+    "ID":"5",
+    "city":"Sidney",
+    "image":"gallery/sidney.jpg"
+  },
+  {
+    "ID":"6",
+    "city":"Tokyo",
+    "image":"gallery/tokyo.jpg"
+  }
+]
+}
